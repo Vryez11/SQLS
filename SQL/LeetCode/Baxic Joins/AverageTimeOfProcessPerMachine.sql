@@ -16,6 +16,6 @@ FROM ProcessTime
 GROUP BY machine_id;
 
 
-# 학습한 내용
-# 1. WITH 절 ProcessTime 생성
-# 2. ROUND(AVG(process_time), 3) : 소수점 3자리에서 반올림
+-- 학습한 내용
+-- 1. WITH 절 ProcessTime 생성
+-- 2. ROUND(AVG(process_time), 3) : 소수점 3자리에서 반올림

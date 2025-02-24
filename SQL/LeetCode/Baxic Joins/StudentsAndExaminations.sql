@@ -11,5 +11,5 @@ LEFT JOIN Examinations e
 GROUP BY s.student_id, s.student_name, sub.subject_name
 ORDER BY s.student_id, sub.subject_name;
 
-# 학습한 내용
-# 1. CROSS JOIN : 모든 학생-과목 조합을 미리 생성해야 하므로 CROSS JOIN 이 필수적이다.
+-- 학습한 내용
+-- 1. CROSS JOIN : 모든 학생-과목 조합을 미리 생성해야 하므로 CROSS JOIN 이 필수적이다.

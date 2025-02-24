@@ -9,5 +9,5 @@ ON
 WHERE
     w1.temperature > w2.temperature;
 
-# 학습한 내용
-# 1. DATEDIFF() : 날짜 (date) Type 에서 두 날짜의 차이를 반환하는 함수
+-- 학습한 내용
+-- 1. DATEDIFF() : 날짜 (date) Type 에서 두 날짜의 차이를 반환하는 함수
