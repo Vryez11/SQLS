@@ -1,0 +1,14 @@
+SELECT
+    e.ID,
+    COALESCE(c.CHILD_COUNT, 0) AS CHILD_COUNT
+FROM ECOLI_DATA e
+         LEFT JOIN (
+            SELECT PARENT_ID, COUNT(*) AS CHILD_COUNT
+            FROM ECOLI_DATA
+            WHERE PARENT_ID IS NOT NULL
+            GROUP BY PARENT_ID
+         ) c ON e.ID = c.PARENT_ID
+ORDER BY e.ID;
+
+-- 학습한 내용
+-- 1. COALESCE 없을 때 0으로 표시

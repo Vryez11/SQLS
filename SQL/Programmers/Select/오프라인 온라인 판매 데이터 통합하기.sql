@@ -1,0 +1,28 @@
+SELECT
+    DATE_FORMAT(SALES_DATE, '%Y-%m-%d') AS SALES_DATE,
+    PRODUCT_ID,
+    USER_ID,
+    SALES_AMOUNT
+FROM
+    ONLINE_SALE
+WHERE
+    SALES_DATE LIKE '2022-03%'
+UNION ALL
+SELECT
+    DATE_FORMAT(SALES_DATE, '%Y-%m-%d') AS SALES_DATE,
+    PRODUCT_ID,
+    NULL AS USER_ID,
+    SALES_AMOUNT
+FROM
+    OFFLINE_SALE
+WHERE
+    SALES_DATE LIKE '2022-03%'
+
+ORDER BY
+    SALES_DATE ASC,
+    PRODUCT_ID ASC,
+    USER_ID ASC;
+
+-- 학습한 내용
+-- 1. UNION ALL 두 테이블의 값을 합칠 때 사용한다.
+-- 2. NULL AS Column명 : NULL 값을 지정하면서 Column명을 지정할 수 있다.의
